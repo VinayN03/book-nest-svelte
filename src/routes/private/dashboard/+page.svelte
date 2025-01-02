@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { BookCard } from "$components";
+	import StarRating from "$components/StarRating.svelte";
     import { getUserState } from "$lib/state/user-state.svelte";
 	import Icon from "@iconify/svelte";
 
@@ -29,6 +30,7 @@
     {/each}
     <!-- BookCategories-->
 </div>
+
 
 <style>
     .dashboard-header {
