@@ -11,7 +11,7 @@
 </script>
 
 <section class="book-category">
-    <h3 class="mb-s">Your most loved books</h3>
+    <h3 class="mb-s">{ categoryName }</h3>
     <div class="books-container">
         {#each booksToDisplay as book }
             <BookCard {book} />
@@ -25,7 +25,14 @@
         overflow-x: auto;
         gap: 16px;
         padding-bottom: 8px;
+        scrollbar-color: transparent transparent;
+
         /* scrollbar-width: thin; */
+    }
+
+    .books-container:hover {
+        scrollbar-color: initial;
+        padding-bottom: 18.5px;
     }
 
     .books-container::-webkit-scrollbar {
@@ -35,5 +42,7 @@
     .books-container::-webkit-scrollbar-thumb {
         background-color: rgba(0, 0, 0, 0.2);
         border-radius: 3px;
+
+
     }
 </style>
