@@ -8,15 +8,7 @@
 
     let userContext = getUserState();
     let { userName, allBooks } = $derived(userContext);
-
-    function updateDatabaseRating(book: Book) {
-
-    }
-    
-
 </script>
-
-<StarRating value={4} isReadOnly={false} updateDatabaseRating={updateDatabaseRating} />
 
 <div class="dashboard">
     <div class="dashboard-header mb-m">
@@ -32,6 +24,8 @@
         </div>
     </div>
     <BookCategory booksToDisplay={allBooks.slice(0,10)} categoryName={"Your favourite books"} />
+    <BookCategory booksToDisplay={allBooks.slice(0,10)} 
+        categoryName={"Highest rated books from your favourite genre: Fantasy"} />
 </div>
 
 
